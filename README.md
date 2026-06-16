@@ -1,7 +1,7 @@
 # GTSRB_Computo_Paralelo
-## Cómputo paralelo aplicado al reconocimiento de señales de tráfico con SIFT-SVM sobre GTSRB
+## Evaluación del Rendimiento de SVM y Random Forest con Paralelización para Clasificación de Señales de Tráfico
 En este proyecto se implementa un clasificador de señales de transito, haciendo uso del dataset **GTSRB (German Traffic Sign Recognition Benchmark)**.
-En donde el objetivo, es hacer una comparación en el rendimiento que tiene un modelo entrenado de manera secuencial, contra una que fue hecha de manera paralela, haciendo uso de bibliotecas como `multiprocessing`.
+En donde el objetivo, es hacer una comparación en el rendimiento que tiene un modelo entrenado de manera secuencial, contra una que fue hecha de manera paralela, haciendo uso de bibliotecas como `multiprocessing`, implementando SVM y Random Forest.
 
 ### Dataset
 Se hace uso del dataset `GTSRB - German Traffic Sign Recognition Benchmark`, el cual contiene 43 clases diferentes de señales de tránsito alemanas.
@@ -15,7 +15,7 @@ El programa descarga el dataset desde Kaggle, esto debido al tamaño que tiene q
 #### Preprocesamiento
 Se cargan las imágenes de cada carpeta correspondiente y se le hacen los siguientes procesos, esto para ajustarse a las especificaciones que requiere el modelo, donde a cada imagen se procesa:
 - Conversion a RGB.
-- Redimensión a 30x30.
+- Redimensión a 96x96.
 - Se normaliza entre valores de 0 y 1.
 - Se vuelve un arreglo de numpy.
 
